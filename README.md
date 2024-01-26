@@ -10,20 +10,35 @@ Grub2Win began in 2010. It has been downloaded more than 1,200,000 times in 180 
 
 ## Features
 • Supports both 64 and 32 bit EFI as well as BIOS firmware.
+
 • Installs to Windows 11, 10, 8, 7 and XP.
+
 • Requires just one directory on the Windows C: drive, about 20 MB disk space.
+
 • Works with all languages. Boot time help is available in 32 languages.
+
 • Simple Windows GUI easily sets up Grub2Win in seconds.
+
 • Lets you set your EFI firmware boot order from within Windows.
+
 • Preview and customize the 9 included graphic background themes. You can also create and customize your own background themes.
-• Works with all filesystems including Mac hfs and Btrfs.
+
+• Works with all filesystems including Mac HFS and BTFRS.
+
 • Can search for and boot a partition by it's UUID or label. Supports advanced scripting.
+
 • Works with both GPT and MBR disks - up to 128 primary partitions per drive.
+
 • Supports extremely large (over 40 TB) disks and partitions.
+
 • Automatically generates config files for Windows, PhoenixOS, Android, Ubuntu, Debian, Suse, Fedora, Manjaro, Mint, Clover, POSROG and more.
+
 • Import config files for Chrome and most other Linux distributions.
+
 • Grub customization is done from Windows - Configuration in Linux is not required.
+
 • Includes open source GNU Grub 2.12 boot modules and libraries. Frequent releases and enhancements.
+
 • No adware or spyware - No hassles... It just works.
 
 ## More Info: 
