@@ -41,8 +41,30 @@ Grub2Win began in 2010. It has been downloaded more than 1,200,000 times in 180 
 
 • No adware or spyware - No hassles... It just works.
 
+# Installing Grub2Win
+This software modifies low level boot code. Make sure you have proper backups of your boot drive and EFI partition. Note that all Grub2Win executables are digitally signed to ensure that they are genuine.
+
+1) Download the grub2win-Setup.exe file from the Releases tab.
+2) Run the exe. This will require administrator access. 
+3) Setup will download the most current Grub2Win modules and start the installation. Follow the prompts to select the drive where the \grub2 product directory will be installed (usually C:)
+4) Once the setup program has completed successfully, a Delete the setup files checkbox will appear. The setup files are no longer needed. Check the box if you want the setup program to clean up these files.
+5) If your machine is running EFI firmware, disable the "Secure Boot" parameter in your firmware settings. This step is not required for machines running BIOS firmware.
+
+# Running Grub2Win
+1) Click on the Grub2Win desktop shortcut or go to the C:\grub2 directory and run grub2win.exe. This will require administrator access.
+
+2) The program will prompt you for your graphics preference, Windows boot timeout and grub timeout. You can also set the Grub2 language. The defaults should work fine, but you can change them if desired. Now click "Manage Boot Menu".
+
+3) Add the partitions you want Grub to display at boot time. Detailed instructions will be found by clicking Help.
+
+4) Now click Apply to return to the main Grub2Win screen. When you are satisfied with the options, click OK. Grub2Win will now generate a customized C:\grub2\grub.cfg file with the systems and options you have selected.
+
+5) Shut down and re-boot your machine. On BIOS systems, you can choose to boot either Windows or the Grub2Win menu. On EFI systems, the Grub2Win menu will appear immediately. You can now use the Grub2Win menu to select the OS you would like to boot.
+
+You can run Grub2Win as often as you like to add, change or remove the systems on your boot menu. Many items, including Linux boot parms, icons, timeouts and partition addresses can be tailored. Your choices will preserved across multiple runs.
+
 ## More Info: 
-Grub2Win is a tool that lets you boot grub2 from your PC's EFI firmware or MBR. It supports Windows 11, Windows 10, Windows 8, Windows 7, Vista and XP. Download this simple Windows program and instructions that help you get grub2 booting quickly. 
+Grub2Win is a tool that lets you boot grub2 from your PC's EFI firmware or MBR. It supports Windows 11, 10, 8, 7, Vista and XP. Download this simple Windows program and instructions that help you get grub2 booting quickly. 
 
 All the files for Grub2Win reside on the Windows C: drive. On EFI systems, five small modules are copied to your EFI partition. You don't have to depend on the availability of any Linux partition to boot your computer. 
 
