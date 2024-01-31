@@ -49,3 +49,5 @@ All the files for Grub2Win reside on the Windows C: drive. On EFI systems, five 
 Grub2 supports extremely large disks (over 40 TB) and GPT partitions allowing you to have many OS images on a single physical disk drive. Grub2 also supports search, advanced scripting and many partition types. Supported filesystems include Btrfs, ext4, ext3, ext2, NTFS, Fat and Mac hfsplus. Booting from CD and USB is also supported by grub2.
 
 Boot time help and messages can be displayed in 30 major languages.
+
+Side note: Yes, i understand that i did not create Grub2Win, but it does not have a good GitHub listing, so I created one.
