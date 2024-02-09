@@ -1,4 +1,11 @@
 # Grub2Win 2.3.8.4
+Now includes the latest GNU Grub 2.12 rc1 kernel
+
+Grub2Win is completely free and open source. All modules are digitally signed for your security.
+
+Safely multiboot Windows and Linux systems on both GPT and MBR disks.
+
+Works with both EFI and BIOS firmware. Supports Windows 11, 10, 8, 7 and XP.
 
 Grub2Win boots native GNU Grub version 2.12 code. Everything is installed to a single 22 MB directory on your Windows C: drive. The install also updates your EFI partition.
 
@@ -7,6 +14,8 @@ Automatically generates config files for PhoenixOS, Android, Ubuntu, Debian, Sus
 You can enter your own custom commands for each menu entry.
 
 Grub2Win began in 2010. It has been downloaded more than 1,200,000 times in 180 countries worldwide.
+
+If you find Grub2Win useful, please consider making a small donation to be used for hardware and testing.
 
 ## Features
 • Supports both 64 and 32 bit EFI as well as BIOS firmware.
