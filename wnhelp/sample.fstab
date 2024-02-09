@@ -1,0 +1,21 @@
+#
+# /etc/fstab				** Ubuntu **
+#
+# <file system>			<mount point>		<type>		<options>		<dump>	<pass>
+#
+LABEL=ubuntu-22.04		/			ext4		errors=remount-ro	  0	  1
+LABEL=swap			none			swap		nofail,sw		  0       0
+LABEL=EFI-PART                  /boot/efi               vfat            nofail,umask=0077         0       1
+#
+#
+LABEL=suse-tumbleweed		/suse			ext4		nofail 
+LABEL=fedora-36.0		/fedora			ext4		nofail 
+#
+LABEL=btrfs-testing		/btrfs-testing		btrfs		nofail
+#
+LABEL=Windows			/C:			ntfs-3g		nofail
+LABEL=Data			/D:			ntfs-3g		nofail
+
+#  
+LABEL=OS-X			/OS-X			hfsplus		nofail,ro
+LABEL=Time-Machine		/Time-Machine		hfsplus		nofail,ro
