@@ -1,0 +1,158 @@
+﻿
+
+<html>
+	
+<head>
+	<title>The Grub2Win Setup screen</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 6.9.0.577">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Grub2Win User Manual.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("TheGrub2WinSetupscreen");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">The Grub2Win Setup screen</h1>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps15"><span class="rvts29"><br/></span></p>
+<p class="rvps15"><span class="rvts29">Click here for the </span><a class="rvts30" href="ChangeLogFor2024.html">Latest Changes</a></p>
+<p class="rvps15"><span class="rvts10"><br/></span></p>
+<p class="rvps15"><span class="rvts10"><br/></span></p>
+<p class="rvps6"><span class="rvts9">Download the </span><span class="rvts13">grub2win.zip</span><span class="rvts9">&nbsp;file from S</span><span class="rvts13">ourceForge</span><span class="rvts9">&nbsp;and unzip it to a location you choose.</span></p>
+<p class="rvps6"><span class="rvts9"><br/></span></p>
+<p class="rvps6"><span class="rvts9">Run the unzipped </span><span class="rvts13">G2WInstall.exe</span><span class="rvts9">&nbsp;program. The program requires administrator access. </span></p>
+<p class="rvps6"><span class="rvts9">It will download and extract the latest Grub2Win modules. The setup screen will now appear.</span></p>
+<p class="rvps6"><span class="rvts9"><br/></span></p>
+<p class="rvps3"><span class="rvts26"><br/></span></p>
+<p class="rvps3"><span class="rvts26">Grub2Win Setup</span></p>
+<p class="rvps17"><span class="rvts10"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps3"><img width="383" height="359" alt="" style="padding : 1px;" src="lib/Setup.jpg"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts9"><br/></span></p>
+<p class="rvps7"><span class="rvts9"><br/></span></p>
+<p class="rvps6"><span class="rvts9">Select the disk where you want to set up the Grub2Win base directory, </span><span class="rvts13">\grub2</span><span class="rvts9">&nbsp;(usually the C: drive).</span></p>
+<p class="rvps6"><span class="rvts9"><br/></span></p>
+<p class="rvps6"><span class="rvts9">Note: If there is already a </span><span class="rvts13">\grub2</span><span class="rvts9">&nbsp;directory on the drive you select, it will be renamed to </span><span class="rvts13">\grub2.old</span><span class="rvts9">&nbsp;before the new directory is created.</span></p>
+<p class="rvps6"><span class="rvts9"><br/></span></p>
+<p class="rvps16"><span class="rvts9"><br/></span></p>
+<p class="rvps12"><span class="rvts9"><br/></span></p>
+<p class="rvps12"><span class="rvts9"><br/></span></p>
+<p class="rvps12"><span class="rvts27">Select The Target Drive </span></p>
+<p class="rvps9"><span class="rvts6">Select the drive where you wish to install the base \grub2 directory will be installed (usually C:). This selection will only appear if you have multiple NTFS partitions.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If there is already a \grub2 directory on the drive, a dialog will appear informing you that the existing directory will be renamed to \grub2.old. Click </span><span class="rvts28">Confirm</span><span class="rvts6">&nbsp;to agree and continue the installation.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps12"><span class="rvts27">Grub2Win desktop shortcut</span></p>
+<p class="rvps9"><span class="rvts6">Check this box if you would like to have a shortcut to Grub2Win placed on your desktop.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps12"><span class="rvts27">Run Grub2Win after the setup finishes</span></p>
+<p class="rvps9"><span class="rvts6">Check this box if you would like to run Grub2Win.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps12"><span class="rvts6"><br/></span></p>
+<p class="rvps12"><span class="rvts6"><br/></span></p>
+<p class="rvps12"><span class="rvts6"><br/></span></p>
+<p class="rvps12"><span class="rvts6"><br/></span></p>
+<p class="rvps12"><span class="rvts27">Setup</span></p>
+<p class="rvps9"><span class="rvts6">Click this when you are ready to start the installation.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">A new \grub2 directory will be created on the drive you select. Your previous settings and backups will be migrated from \grub2.old if it exists so they will be available on the new \grub2 installation.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">A progress box will appear showing the install steps as they occur.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps12"><span class="rvts9"><br/></span></p>
+<p class="rvps12"><span class="rvts9"><br/></span></p>
+<p class="rvps7"><span class="rvts9"><br/></span></p>
+<p class="rvps7"><a class="rvts14" href="file:///C:/grub2/winhelp/user.manual.pdf"><br/></a></p>
+<p></p>
+<p class="rvps5" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Create cross-platform Qt Help files</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2010 - 2024  by Dave Pickens. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

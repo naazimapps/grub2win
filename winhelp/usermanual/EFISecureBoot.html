@@ -1,0 +1,141 @@
+﻿
+
+<html>
+	
+<head>
+	<title>EFI Secure Boot</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 6.9.0.577">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Grub2Win User Manual.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("EFISecureBoot");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">EFI Secure Boot</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="AdvancedTopics.html">Advanced Topics</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps52"><span class="rvts32">EFI Secure Boot</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts31">Grub2Win requires that the EFI Secure Boot facility is disabled.</span></p>
+<p class="rvps4"><span class="rvts31"><br/></span></p>
+<p class="rvps56"><span class="rvts31">Disabling "Secure Boot" is required to run any </span><span class="rvts27">"Non-Microsoft" </span><span class="rvts31">boot manager such as Grub2Win.</span></p>
+<p class="rvps56"><span class="rvts31"><br/></span></p>
+<p class="rvps4"><span class="rvts33">This procedure varies widely and depends on the exact model of your PC or motherboard.</span></p>
+<p class="rvps4"><span class="rvts33"><br/></span></p>
+<p class="rvps4"><span class="rvts33"><br/></span></p>
+<p class="rvps9"><a class="rvts97" href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot"><br/></a></p>
+<p class="rvps9"><span class="rvts31">Open the PC BIOS menu. You can often access this menu by pressing a key during the bootup sequence, such as F1, F2 or Del.</span></p>
+<p class="rvps9"><span class="rvts31"><br/></span></p>
+<p class="rvps9"><span class="rvts31"><br/></span></p>
+<p class="rvps9"><span class="rvts31">Or, from Windows, hold the Shift key while selecting Restart. Go to Troubleshoot &gt; Advanced Options: UEFI Firmware Settings.</span></p>
+<p class="rvps9"><span class="rvts31"><br/></span></p>
+<p class="rvps9"><span class="rvts31"><br/></span></p>
+<p class="rvps9"><span class="rvts31">Find the Secure Boot setting, and if possible, set it to Disabled. This option is usually in either the Security tab, the Boot tab, or the Authentication tab.</span></p>
+<p class="rvps9"><span class="rvts31"><br/></span></p>
+<p class="rvps9"><span class="rvts31"><br/></span></p>
+<p class="rvps9"><span class="rvts31">Save changes and exit. The PC reboots.</span></p>
+<p class="rvps9"><span class="rvts31"><br/></span></p>
+<p class="rvps9"><span class="rvts31"><br/></span></p>
+<p class="rvps9"><span class="rvts31">In some cases, you may need to change other settings in the firmware, such as enabling a Compatibility Support Module (CSM) to support legacy BIOS operating systems.</span></p>
+<p class="rvps9"><span class="rvts31"><br/></span></p>
+<p class="rvps9"><span class="rvts31"><br/></span></p>
+<p class="rvps9"><span class="rvts31"><br/></span></p>
+<p class="rvps9"><span class="rvts31">If you are having trouble disabling Secure Boot after following the steps above, contact your PC or motherboard manufacturer for help.</span></p>
+<p class="rvps4"><span class="rvts98"><br/></span></p>
+<p class="rvps4"><span class="rvts31"><br/></span></p>
+<p class="rvps4"><span class="rvts31"><br/></span></p>
+<p class="rvps4"><span class="rvts31"><br/></span></p>
+<p class="rvps4"><span class="rvts31"><br/></span></p>
+<p class="rvps4"><span class="rvts31"><br/></span></p>
+<p class="rvps4"><span class="rvts31"><br/></span></p>
+<p class="rvps4"><span class="rvts31"><br/></span></p>
+<p class="rvps4"><span class="rvts31"><br/></span></p>
+<p class="rvps4"><span class="rvts31"><br/></span></p>
+<p class="rvps4"><span class="rvts31"><br/></span></p>
+<p class="rvps4"><span class="rvts31"><br/></span></p>
+<p class="rvps4"><span class="rvts31"><br/></span></p>
+<p class="rvps4"><span class="rvts31"><br/></span></p>
+<p></p>
+<p class="rvps5" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Create help files for the Qt Help Framework</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2010 - 2024  by Dave Pickens. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

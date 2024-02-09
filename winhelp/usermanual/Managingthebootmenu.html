@@ -1,0 +1,180 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Managing the boot menu</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 6.9.0.577">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Grub2Win User Manual.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Managingthebootmenu");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Managing the boot menu</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="UsingtheGrubMenu.html">Using the Grub Menu</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts53">Manage Boot Menu</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps3"><img width="606" height="513" alt="" style="padding : 1px;" src="lib/Manage Boot Menu.jpg"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">This screen will appear when you click the </span><a class="rvts68" href="TheMainConfigurationScreen.html">Manage Boot Menu</a><span class="rvts6">&nbsp;button on the </span><a class="rvts64" href="TheMainConfigurationScreen.html">Main Configuration</a><span class="rvts6">&nbsp;screen.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts55">To customize an entry, click inside the box for the entry.</span></p>
+<p class="rvps9"><span class="rvts6">This will bring up the </span><a class="rvts68" href="EditingOSdetails.html">Edit OS Details</a><span class="rvts6">&nbsp;screen.</span></p>
+<p class="rvps15"><span class="rvts55"><br/></span></p>
+<p class="rvps15"><span class="rvts55"><br/></span></p>
+<p class="rvps15"><span class="rvts55">Use the up / down arrows on the right to change the menu sequence.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts27">Default = Last Booted OS</span></p>
+<p class="rvps15"><span class="rvts6">When you check this box, the last OS booted by Grub2Win will automatically become the new default.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts27">Default Checkbox</span><span class="rvts6">&nbsp;- On the upper left corner of each menu item</span></p>
+<p class="rvps15"><span class="rvts6">Check this box for the OS you want to start automatically at Grub boot time if no keys are pressed. These boxes will not be visible if you have checked the "Last Booted OS" box above.</span></p>
+<p class="rvps15"><span class="rvts6">When you check this box, the menu item will be highlighted in green.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts27">Add A New Entry</span></p>
+<p class="rvps15"><span class="rvts6">Creates an additional selection and brings up the </span><a class="rvts69" href="EditingOSdetails.html">Edit OS details</a><span class="rvts6">&nbsp;screen for the new selection.</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts27"><br/></span></p>
+<p class="rvps4"><span class="rvts27">Import Configuration File</span></p>
+<p class="rvps4"><span class="rvts27"><br/></span></p>
+<p class="rvps15"><span class="rvts6">Click the Linux button to import entries from .cfg files created by GNU Grub within Linux</span></p>
+<p class="rvps15"><span class="rvts6">See the </span><a class="rvts64" href="ImportingLinuxConfigFiles.html">Importing Linux Config Files</a><span class="rvts6">&nbsp;topic for details.</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps25"><span class="rvts6">or</span></p>
+<p class="rvps25"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6">Click the Chrome button to import entries from configuration files created by Brunch.</span></p>
+<p class="rvps15"><span class="rvts6">See the</span><span class="rvts28">&nbsp;</span><a class="rvts64" href="ImportingChromeOSConfigFiles.html">Importing ChromOS Config Files</a><span class="rvts6">&nbsp;topic for details.</span></p>
+<p class="rvps15"><span class="rvts6">&nbsp;</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts27">Delete</span></p>
+<p class="rvps15"><span class="rvts6">Removes a selection from the grub menu. </span><span class="rvts70">No software is actually removed from your computer, it simply is not displayed by in the Grub menu at boot time. At least one menuentry must remain for Grub to function properly. Windows can be deleted if you only want to select from Linux systems.</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts27">Remove The User Section</span></p>
+<p class="rvps15"><span class="rvts6">Clears the User Section code and removes the User Section from the configuration</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts31">Editing the existing User Section</span></p>
+<p class="rvps4"><span class="rvts31"><br/></span></p>
+<p class="rvps15"><span class="rvts6">If there are User Section menu entries present at the bottom of the configuration, simply click one of them to update the User Section code.</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6">Grub2Win then calls the Windows Notepad program to edit the C:\grub2\userfiles\usersection.cfg file. </span></p>
+<p class="rvps15"><span class="rvts6">When you close notepad, the file will be scanned for simple syntax errors.</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts31">Creating the User Section</span></p>
+<p class="rvps4"><span class="rvts31"><br/></span></p>
+<p class="rvps15"><span class="rvts6">If no user section is currently present, click the</span><span class="rvts28">&nbsp;</span><span class="rvts6">"</span><span class="rvts28">Add A New Entry</span><span class="rvts6">" button and select type "</span><span class="rvts28">create user section</span><span class="rvts6">". Notepad will then open a window for you to enter your code. When you save the file, the User Section will be created.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts27"><br/></span></p>
+<p class="rvps15"><span class="rvts27"><br/></span></p>
+<p class="rvps15"><span class="rvts27"><br/></span></p>
+<p class="rvps15"><span class="rvts27"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps5" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour">Easily create CHM Help documents</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2010 - 2024  by Dave Pickens. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

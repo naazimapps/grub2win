@@ -1,0 +1,143 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Using Partition Labels</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 6.9.0.577">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Grub2Win User Manual.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("UsingPartitionLabels");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Using Partition Labels</h1>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts18">Using Label Search With Grub2 And Fstab </span></p>
+<p class="rvps3"><span class="rvts21">to simplify your life</span></p>
+<p class="rvps2"><span class="rvts9"><br/></span></p>
+<p class="rvps2"><span class="rvts9">&nbsp;</span></p>
+<p class="rvps2"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9">You will probably come across situations where you are unsure of the physical address of a partition. In the past, grub required the root partition to be specified as a physical address such as </span><span class="rvts13">/dev/sda2</span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9">This works fairly well when you have a limited number of partitions and your disk drives are not frequently moved. As the number of partitions increases or you move to a virtual environment like Oracle’s VirtualBox, it becomes less likely you can be sure of the physical address. Hot swapping disks may also cause the physical address to change.</span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9">Another way to specify a partition for grub is via UUID in the format:</span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts13">UUID=75e8b058-dba5-4081-96aa-fc6fd814d1a9</span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9">UUID’s work reliably, but they're not very friendly. When you run a partition tool like gparted, it is not obvious, from the UUID's, which partition is which. </span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9">Grub2 has the ability to search and boot using a partition label like &nbsp;</span><span class="rvts13">ubuntu-22.04&nbsp;</span><span class="rvts9">&nbsp;</span></p>
+<p class="rvps4"><span class="rvts9">This is easy to remember and grub2 will reliably find that label even if it is on partition 17 of a GPT drive that has been moved from controller to controller several times. When you look at your partitions using gparted, you can tell from the label exactly what a partition contains.</span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9">Once you have your partitions labeled, you no longer have to worry about partition layouts or disk controller order. You can move drives and partitions around freely and, as long as the labels are correct, grub will boot your systems properly. This is particularly important in a virtual environment, where drives and partitions can be quite dynamic.</span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9">I've included instructions on: </span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 60px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 60px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps37"><a class="rvts78" href="Settingyourlabels.html">Setting partition labels</a></li>
+</ul></ul>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 60px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 60px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps37"><a class="rvts78" href="Grublabelsearch.html">Configuring grub to search for partitions by label at boot time</a></li>
+</ul></ul>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 60px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 60px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps37"><a class="rvts78" href="Labelsinetcfstab.html">Setting up the Linux /etc/fstab to mount your filesystems by label</a></li>
+</ul></ul>
+<p class="rvps37"><span class="rvts9"><br/></span></p>
+<p class="rvps37"><span class="rvts9"><br/></span></p>
+<p class="rvps37"><span class="rvts9"><br/></span></p>
+<p class="rvps37"><span class="rvts9"><br/></span></p>
+<p class="rvps37"><span class="rvts9"><br/></span></p>
+<p class="rvps37"><span class="rvts9"><br/></span></p>
+<p class="rvps37"><span class="rvts9"><br/></span></p>
+<p class="rvps37"><span class="rvts9"><br/></span></p>
+<p class="rvps37"><span class="rvts9"><br/></span></p>
+<p class="rvps37"><span class="rvts9"><br/></span></p>
+<p class="rvps37"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p></p>
+<p class="rvps5" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/create-epub-ebooks">Write EPub books for the iPad</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2010 - 2024  by Dave Pickens. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

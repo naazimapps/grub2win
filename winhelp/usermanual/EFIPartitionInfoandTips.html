@@ -1,0 +1,264 @@
+﻿
+
+<html>
+	
+<head>
+	<title>EFI Partition Info and Tips</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 6.9.0.577">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Grub2Win User Manual.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("EFIPartitionInfoandTips");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">EFI Partition Info and Tips</h1>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps14"><span class="rvts41">EFI Partition Information and Tips</span></p>
+<p class="rvps2"><span class="rvts39"><br/></span></p>
+<p class="rvps2"><span class="rvts39"><br/></span></p>
+<p class="rvps2"><span class="rvts39"><br/></span></p>
+<p class="rvps2"><span class="rvts39"><br/></span></p>
+<p class="rvps22"><span class="rvts39">Please Note</span></p>
+<p class="rvps4"><span class="rvts39"><br/></span></p>
+<p class="rvps4"><span class="rvts38">Nearly all machines and motherboards manufactured since 2015 are delivered with </span><span class="rvts39">EFI</span><span class="rvts38">&nbsp;firmware.</span></p>
+<p class="rvps4"><span class="rvts38">Their disks are almost always set up using the </span><span class="rvts39">GPT</span><span class="rvts38">&nbsp;partition style.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">Older machines may use </span><span class="rvts39">BIOS</span><span class="rvts38">&nbsp;firmware. Their disks are set up using the </span><span class="rvts39">MBR</span><span class="rvts38">&nbsp;partition style.</span></p>
+<p class="rvps4"><span class="rvts38">These old BIOS machines do not have EFI partitions.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts39"><br/></span></p>
+<p class="rvps2"><span class="rvts39"><br/></span></p>
+<p class="rvps2"><span class="rvts39"><br/></span></p>
+<p class="rvps2"><span class="rvts39">Description</span></p>
+<p class="rvps2"><span class="rvts39"><br/></span></p>
+<p class="rvps4"><span class="rvts38">The EFI partition is a special partition that is created when you first install Windows or Linux on your machine. </span></p>
+<p class="rvps4"><span class="rvts38">The Windows or Linux setup programs will create an EFI partition if it does not already exist.</span></p>
+<p class="rvps4"><span class="rvts38">Otherwise, the setup program should simply update the existing EFI partition.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">The EFI partition should have a directory named /EFI at it's root.</span></p>
+<p class="rvps4"><span class="rvts38">This /EFI directory has subdirectories containing the boot manager modules responsible for loading your operating systems.</span></p>
+<p class="rvps4"><span class="rvts38">Commonly used boot managers include those for Windows, Linux, Clover, MacOS and Grub2Win as well as others.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts39">Operation</span></p>
+<p class="rvps2"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">At boot time, the EFI firmware in your motherboard searches all your disks for the EFI partition.</span></p>
+<p class="rvps4"><span class="rvts38">It is identified by a very specific partition type UUID. </span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">On GPT disks, the EFI partition type UUID </span><span class="rvts39">must</span><span class="rvts38">&nbsp;be set to </span><span class="rvts39">C12A7328-F81F-11D2-BA4B-00A0C93EC93B</span></p>
+<p class="rvps4"><span class="rvts39"><br/></span></p>
+<p class="rvps4"><span class="rvts38">On MBR flash drives, the partition type must be set to </span><span class="rvts39">EF </span><span class="rvts38">and a Windows drive letter must be assigned.</span></p>
+<p class="rvps4"><span class="rvts39"><br/></span></p>
+<p class="rvps4"><span class="rvts38">Otherwise your EFI firmware will probably fail to boot.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">Your EFI firmware then scans the EFI partition and creates a list of the available boot manager modules it finds.</span></p>
+<p class="rvps4"><span class="rvts38">It loads the current default boot manager module from that list.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">The default boot manager can be set by </span><a class="rvts40" href="EFIfirmwareorder.html">Grub2Win</a><span class="rvts38">&nbsp;or from your machine's EFI Firmware setup.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">Note: When you apply Windows or Linux updates, the maintenance programs often change the default boot manager settings.</span></p>
+<p class="rvps4"><span class="rvts38">This can cause Windows or Linux to unexpectedly boot, instead of the OS you have manually selected.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts39">The Grub2Win EFI setup process</span></p>
+<p class="rvps4"><span class="rvts38"></span><br/><span class="rvts38">When Grub2Win is installed, it automatically creates a "grub2win" subdirectory in your EFI partition</span></p>
+<p class="rvps4"><span class="rvts38">A few customized Grub2Win boot manager modules, with a total size of about 1.3 MB, are then copied to this new subdirectory.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">The EFI firmware default boot manager is then set to automatically boot Grub2Win.</span></p>
+<p class="rvps2"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts39">Multiple EFI partitions warning</span></p>
+<p class="rvps4"><span class="rvts38"></span><br/><span class="rvts38">Normally there is only one EFI partition on your machine.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">The various boot managers installed should share this single EFI partition.</span></p>
+<p class="rvps4"><span class="rvts38"></span><br/><span class="rvts38">When you install an OS, the setup program should create a unique subdirectory within the EFI partition to store its boot modules.</span><br/><span class="rvts38"></span><br/><span class="rvts38">The EFI firmware in most motherboards expects a </span><span class="rvts39">single</span><span class="rvts38">&nbsp;EFI partition.</span><br/><span class="rvts38">Systems that have multiple EFI partitions often experience boot problems. </span></p>
+<p class="rvps4"><span class="rvts38"></span><br/><span class="rvts38">Your EFI firmware may not understand which of the multiple partitions is the “real” EFI partition.</span></p>
+<p class="rvps4"><span class="rvts38">Creating multiple EFI partitions is a complex task. </span></p>
+<p class="rvps4"><span class="rvts38">This is not recommended and can cause boot failures as well as other unusual symptoms.</span></p>
+<p class="rvps2"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts39">EFI partition properties</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">The EFI partition is usually formatted FAT32 although it can be formatted FAT16 or even FAT12.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">The partition type UUID on GPT drives </span><span class="rvts39">must</span><span class="rvts38">&nbsp;be </span><span class="rvts39">C12A7328-F81F-11D2-BA4B-00A0C93EC93B</span><span class="rvts38">&nbsp;so your firmware can find it.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">On MBR flash drives the partition type </span><span class="rvts39">must</span><span class="rvts38">&nbsp;be </span><span class="rvts39">EF</span><span class="rvts38">.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">A reasonable EFI partition size is 200 MB. If you have many operating systems, you might make it 400 MB.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">Most boot manager subdirectories are around 4 MB. Each one typically contains six or seven modules.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">The Microsoft boot manager subdirectory is much larger, about 25 MB.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts39">How to Create an EFI partition using the Microsoft Windows DiskPart utility</span></p>
+<p class="rvps2"><span class="rvts39"><br/></span></p>
+<p class="rvps4"><span class="rvts38">This procedure will create an EFI partition with the correct properties and UUID.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">Note: Microsoft DiskPart does not allow EFI partitions on flash drives to be formatted or have letters assigned.</span></p>
+<p class="rvps4"><span class="rvts38">For flash drives, use the Linux gparted utility instead of DiskPart.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts39"><br/></span></p>
+<p class="rvps4"><span class="rvts38">Open an administrative command prompt.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">Enter the following commands:</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps15"><span class="rvts38">diskpart</span></p>
+<p class="rvps15"><span class="rvts38"><br/></span></p>
+<p class="rvps15"><span class="rvts38">list disk &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt; Shows the disks on your system</span></p>
+<p class="rvps15"><span class="rvts38"><br/></span></p>
+<p class="rvps15"><span class="rvts38">select disk </span><span class="rvts39">1</span><span class="rvts38"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts38"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts38">&lt; Use the disk number where you want the EFI partition</span></p>
+<p class="rvps15"><span class="rvts38"><br/></span></p>
+<p class="rvps15"><span class="rvts38">convert gpt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt; Skip this step if the disk is already in GPT format</span></p>
+<p class="rvps15"><span class="rvts38"><br/></span></p>
+<p class="rvps15"><span class="rvts38">create partition efi size </span><span class="rvts39">200</span><span class="rvts38">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt; Set the partition size in MB that you want</span></p>
+<p class="rvps15"><span class="rvts38"><br/></span></p>
+<p class="rvps15"><span class="rvts38">format fs=fat32 quick </span></p>
+<p class="rvps15"><span class="rvts38"><br/></span></p>
+<p class="rvps15"><span class="rvts38">list partition &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt; Should show your new EFI partition with a type of "System"</span></p>
+<p class="rvps15"><span class="rvts38"><br/></span></p>
+<p class="rvps15"><span class="rvts38">exit</span></p>
+<p class="rvps15"><span class="rvts38"><br/></span></p>
+<p class="rvps15"><span class="rvts38"><br/></span></p>
+<p class="rvps15"><span class="rvts38"><br/></span></p>
+<p class="rvps15"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts39">How to create an EFI partition using the Linux gparted utility</span></p>
+<p class="rvps2"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">This procedure will create an EFI partition with the correct properties and UUID.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">Run the Linux gparted application. This requires root access.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps15"><span class="rvts38">On a GPT type disk or an MBR flash drive, create a primary partition with fat32 format.</span></p>
+<p class="rvps15"><span class="rvts38"><br/></span></p>
+<p class="rvps15"><span class="rvts38">Click "Apply"</span></p>
+<p class="rvps15"><span class="rvts38"><br/></span></p>
+<p class="rvps15"><span class="rvts38">After the partition is created, right click on it and select "Manage Flags"</span></p>
+<p class="rvps15"><span class="rvts38"><br/></span></p>
+<p class="rvps15"><span class="rvts38">Select the "esp" checkbox. This will automatically check the "boot" checkbox.</span></p>
+<p class="rvps15"><span class="rvts38"><br/></span></p>
+<p class="rvps15"><span class="rvts38">Close the "Manage Flags" menu, apply the changes, and exit gparted.</span></p>
+<p class="rvps15"><span class="rvts38"><br/></span></p>
+<p class="rvps15"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts39">Here is the directory listing from a typical EFI partition. It shows the various subdirectories.</span></p>
+<p class="rvps2"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">Volume in drive E is EFI-OS</span><br/><span class="rvts38">Volume Serial Number is 906D-AD19</span><br/><span class="rvts38"></span><br/><span class="rvts38">&nbsp;Directory of E:\EFI</span><br/><span class="rvts38"></span><br/><span class="rvts38">08/24/2020&nbsp; 09:10 AM&nbsp;&nbsp;&nbsp; &lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .</span><br/><span class="rvts38">08/24/2020&nbsp; 09:10 AM&nbsp;&nbsp;&nbsp; &lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ..</span><br/><span class="rvts38">08/24/2020&nbsp; 09:10 AM&nbsp;&nbsp;&nbsp; &lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Acronis</span><br/><span class="rvts38">08/24/2020&nbsp; 09:10 AM&nbsp;&nbsp;&nbsp; &lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Boot</span><br/><span class="rvts38">08/24/2020&nbsp; 09:10 AM&nbsp;&nbsp;&nbsp; &lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CLOVER</span><br/><span class="rvts38">08/24/2020&nbsp; 09:10 AM&nbsp;&nbsp;&nbsp; &lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FreeBSD</span><br/><span class="rvts38">08/24/2020&nbsp; 09:10 AM&nbsp;&nbsp;&nbsp; &lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; grub2win</span><br/><span class="rvts38">08/24/2020&nbsp; 09:10 AM&nbsp;&nbsp;&nbsp; &lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Microsoft</span><br/><span class="rvts38">08/24/2020&nbsp; 09:10 AM&nbsp;&nbsp;&nbsp; &lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; opensuse</span><br/><span class="rvts38">08/24/2020&nbsp; 09:10 AM&nbsp;&nbsp;&nbsp; &lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ubuntu</span><br/><span class="rvts38">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 File(s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 bytes</span><br/><span class="rvts38">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 Dir(s)&nbsp; 47,234,560 bytes free</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts38"><br/></span></p>
+<p class="rvps2"><span class="rvts37"><br/></span></p>
+<p class="rvps2"><span class="rvts37"><br/></span></p>
+<p class="rvps2"><span class="rvts37"><br/></span></p>
+<p class="rvps2"><span class="rvts37"><br/></span></p>
+<p class="rvps2"><span class="rvts37"><br/></span></p>
+<p class="rvps2"><span class="rvts37"><br/></span></p>
+<p class="rvps2"><span class="rvts37"><br/></span></p>
+<p class="rvps2"><span class="rvts37"><br/></span></p>
+<p class="rvps2"><span class="rvts37"><br/></span></p>
+<p class="rvps2"><span class="rvts37"><br/></span></p>
+<p class="rvps2"><span class="rvts37"><br/></span></p>
+<p class="rvps2"><span class="rvts37"><br/></span></p>
+<p class="rvps2"><span class="rvts37"><br/></span></p>
+<p class="rvps2"><span class="rvts37"><br/></span></p>
+<p class="rvps2"><span class="rvts37"><br/></span></p>
+<p class="rvps2"><span class="rvts37"><br/></span></p>
+<p class="rvps2"><span class="rvts37"><br/></span></p>
+<p class="rvps2"><span class="rvts37"><br/></span></p>
+<p class="rvps2"><span class="rvts37"><br/></span></p>
+<p class="rvps2"><span class="rvts37"><br/></span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps5" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Full-featured Documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2010 - 2024  by Dave Pickens. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

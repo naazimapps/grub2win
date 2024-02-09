@@ -1,0 +1,124 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Fedora and Manjaro</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 6.9.0.577">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Grub2Win User Manual.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("FedoraandManjaro");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Fedora and Manjaro</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="AdvancedTopics.html">Advanced Topics</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps11"><span class="rvts15">Special considerations for Fedora and Manjaro</span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9">Most Linux distributions have stable names for their Linux kernel and initrd files. Links are automatically set up each time the kernel is updated. &nbsp;The link names stay the same and you can rely on their location.</span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9">For some reason, Fedora and Manjaro don’t set up stable link names. The names change with every kernel update. Grub2 requires the kernel file name in the linux command. It also needs the initrd file name in the initrd command. </span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9">I included a simple bash script which can be copied with a flash drive to run from within Fedora or Manjaro. The script must be run via </span><span class="rvts13">sudo</span><span class="rvts9">&nbsp;as it requires root privileges. It creates two link files: /boot/vmlinuz and /boot/initramfs.img which point to the most recent kernel and initrd files. &nbsp;</span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9">The script is called </span><span class="rvts13">xxkernlink.sh</span><span class="rvts9">&nbsp;and it is available in </span><span class="rvts13">C:\grub2\winsource</span><span class="rvts9">. It should be copied to your Fedora or Manjaro partition and run within Linux whenever the kernel is updated. You can run it as often as desired since it simply refreshes the links each time it is run.</span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p></p>
+<p class="rvps5" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">iPhone web sites made easy</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2010 - 2024  by Dave Pickens. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

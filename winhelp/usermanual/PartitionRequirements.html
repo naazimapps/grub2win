@@ -1,0 +1,147 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Partition Requirements</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 6.9.0.577">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Grub2Win User Manual.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("PartitionRequirements");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Partition Requirements</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="AdvancedTopics.html">Advanced Topics</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts41">Partition Requirements</span></p>
+<p class="rvps30"><span class="rvts6"><br/></span></p>
+<p class="rvps30"><span class="rvts6"><br/></span></p>
+<p class="rvps30"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6">On BIOS systems, the grub2 directory must be located on the Windows boot partition.</span></p>
+<p class="rvps4"><span class="rvts6">This is usually </span><span class="rvts28">C:\grub2</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps21"><span class="rvts6">****************************************</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts28"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6">On EFI systems, you can place the </span><span class="rvts28">grub2</span><span class="rvts6">&nbsp;directory on the root of any partition that Windows can read (NTFS or FAT). It can also be placed on USB drives. Most users place the directory on the Windows boot partition at </span><span class="rvts28">C:\grub2</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6">Examples of possible directory placement:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts28">C:\grub2</span><span class="rvts6">&nbsp; &nbsp; &nbsp; &nbsp; ** The usual Windows boot partition **</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts28">D:\grub2</span><span class="rvts6">&nbsp; &nbsp; &nbsp; &nbsp; ** A second Windows NTFS partition **</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts28">N:\grub2</span><span class="rvts6">&nbsp; &nbsp; &nbsp; &nbsp; ** A USB drive partition formatted FAT32 **</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6">Notes:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6">At boot time, grub will search for it's directory and will use the first partition where it is found. To avoid </span></p>
+<p class="rvps15"><span class="rvts6">confusion, you should only have a single grub2 directory.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6">For clarity, this help file will refer to the </span><span class="rvts28">grub2</span><span class="rvts6">&nbsp;directory as </span><span class="rvts28">C:\grub2</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts28"><br/></span></p>
+<p class="rvps4"><span class="rvts28"><br/></span></p>
+<p class="rvps4"><span class="rvts28"><br/></span></p>
+<p class="rvps4"><span class="rvts28"><br/></span></p>
+<p class="rvps4"><span class="rvts28"><br/></span></p>
+<p class="rvps4"><span class="rvts28"><br/></span></p>
+<p class="rvps4"><span class="rvts28"><br/></span></p>
+<p class="rvps4"><span class="rvts28"><br/></span></p>
+<p class="rvps4"><span class="rvts28"><br/></span></p>
+<p class="rvps4"><span class="rvts28"><br/></span></p>
+<p class="rvps4"><span class="rvts28"><br/></span></p>
+<p class="rvps4"><span class="rvts28"><br/></span></p>
+<p class="rvps4"><span class="rvts28"><br/></span></p>
+<p class="rvps4"><span class="rvts28"><br/></span></p>
+<p class="rvps4"><span class="rvts28"><br/></span></p>
+<p></p>
+<p class="rvps5" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpauthoringsoftware.com">Benefits of a Help Authoring Tool</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2010 - 2024  by Dave Pickens. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

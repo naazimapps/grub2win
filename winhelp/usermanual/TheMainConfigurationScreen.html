@@ -1,0 +1,248 @@
+﻿
+
+<html>
+	
+<head>
+	<title>The Main Configuration Screen</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 6.9.0.577">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Grub2Win User Manual.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("TheMainConfigurationScreen");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">The Main Configuration Screen</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="UsingtheGrubMenu.html">Using the Grub Menu</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts53">Main Configuration</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps3"><img width="609" height="514" alt="" style="padding : 1px;" src="lib/Main Configuration.jpg"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps29"><span class="rvts6"><br/></span></p>
+<p class="rvps29"><span class="rvts6">This is the first screen that will appear when you run Grub2Win.exe</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts27"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts55">To customize the theme, click the preview image.</span></p>
+<p class="rvps15"><span class="rvts6">This will take you to the </span><a class="rvts64" href="Customizingthetheme.html">Customize Theme</a><span class="rvts6">&nbsp; screen.</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts27">Restore</span></p>
+<p class="rvps15"><span class="rvts6">Each time you run Grub2Win, an automatic backup is made of your BCD, configuration and menu settings.</span></p>
+<p class="rvps15"><span class="rvts6">These backups are stored in </span><span class="rvts28">C:\grub2\windata\backups</span><span class="rvts6">. The five most recent backups are saved. If you wish to restore your settings to an earlier time, you can click this button. You be then be prompted to restore one of those five previous backups. The Windows BCD backup will also be restored. Once the restore has completed successfully, the Grub2Win program will restart.</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts27">Syntax</span></p>
+<p class="rvps15"><span class="rvts6">Click this button if you want to check a Grub configuration file for basic syntax errors. A file open dialog will appear, allowing you to select a .cfg file for the syntax check. The default is the main Grub2Win configuration file </span><span class="rvts28">C:\grub2\grub.cfg</span><span class="rvts6">. The syntax checker only flags basic errors such as unmatched quotes, if fi clauses and brackets. More detailed checking may be added in a future release.</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts27">Updates</span></p>
+<p class="rvps15"><span class="rvts6">Click this button to see the version and release date of Grub2win. The </span><a class="rvts64" href="Checkingforupdates.html">Check For Updates</a><a class="rvts65" href="Checkingforupdates.html">&nbsp;</a><span class="rvts6">screen will appear, where you can download the latest updates and change log. &nbsp;</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts27">EFI Partition Operations</span><a name="Operations"></a><span class="rvts27">&nbsp; (Only appears in EFI mode)</span></p>
+<p class="rvps15"><span class="rvts6">Clicking this button will let you update your EFI partitions. The </span><a class="rvts64" href="EFIupdatelog.html">EFI Update Log</a><span class="rvts6">&nbsp;screen will appear showing progress as the program scans your disks for valid EFI partitions. Once the EFI partitions are allocated, you will be taken &nbsp;to the</span><span class="rvts28">&nbsp;</span><a class="rvts64" href="EFIupdateactions.html">EFI update actions</a><a class="rvts65" href="EFIupdateactions.html">&nbsp;</a><span class="rvts6">screen where you can browse and update your EFI partitions.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts27">Set EFI Firmware Order &nbsp;(Only appears in EFI mode)</span></p>
+<p class="rvps15"><span class="rvts6">Clicking this button brings up the </span><a class="rvts64" href="EFIfirmwareorder.html">EFI Firmware Order</a><span class="rvts6">&nbsp;screen. This allows you to change the boot order in your machine's firmware.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts27">Click To Reboot Your Machine For EFI Firmware Setup &nbsp;(Only appears in EFI mode)</span></p>
+<p class="rvps15"><span class="rvts6">When you click this button, you will be asked to confirm a reboot to access your machine's EFI firmware setup menu.</span></p>
+<p class="rvps15"><span class="rvts6">If you do not confirm, you machine will not be rebooted and you will be returned to the main configuration screen.</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6">Rebooting to the EFI firmware menu can be useful for setting EFI secure boot, boot order and other firmware options.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts27">Desktop Shortcut</span></p>
+<p class="rvps15"><span class="rvts6">Check this box to create a Grub2Win shortcut on your desktop. Uncheck to remove the shortcut.</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts27">Boot default OS</span></p>
+<p class="rvps15"><span class="rvts6">The OS that will be booted automatically if you don't press an up or down arrow key. </span></p>
+<p class="rvps15"><span class="rvts6">You can also select </span><span class="rvts28">** Last Booted OS **</span><span class="rvts6">&nbsp;which will cause the last OS booted by Grub2Win to become the default.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts27">Boot graphics mode</span></p>
+<p class="rvps15"><span class="rvts6">At boot time, the Grub selection menu will appear in this mode. It does not set the target OS graphics mode.</span></p>
+<p class="rvps15"><span class="rvts6">Select </span><span class="rvts28">** Auto **</span><span class="rvts6">&nbsp;to set the graphics mode automatically. </span></p>
+<p class="rvps15"><span class="rvts6">Custom resolution selections can be added by creating the gfxmode.cfg file. See the &nbsp;</span><a class="rvts64" href="UserBackgroundsandImages.html">Other User Files</a><span class="rvts6">&nbsp; topic for details. </span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts27">Partition List</span></p>
+<p class="rvps15"><span class="rvts6">Displays a Partition Listing that contains details about the attached disks and partitions.</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts27">System Info</span></p>
+<p class="rvps15"><span class="rvts6">Displays information about the Firmware, System, Motherboard and Secure Boot status. </span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts27">Diagnostics</span></p>
+<p class="rvps15"><span class="rvts6">Allows you to run the Grub2Win diagnostic routine if needed. The diagnostic data will be compressed and stored in file</span><span class="rvts28">&nbsp;C:\grub2\diagnose7z</span><span class="rvts6">. See </span><a class="rvts64" href="SupportandDiagnostics.html">Support and Diagnostics</a><span class="rvts6">&nbsp;for details.</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts27">Boot locale language</span></p>
+<p class="rvps15"><span class="rvts6">At boot time, Gnu Grub will display error messages and help using the selected language.</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6">If you select </span><span class="rvts28">** Auto **</span><span class="rvts6">, &nbsp;Grub2Win will automatically set the locale to the currently selected Windows language.</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6">The automatic function is only available if you are using a Windows language supported by the GNU Grub software.</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6">See </span><a class="rvts64" href="LanguageSupport.html">Language Support</a><span class="rvts6">&nbsp;</span><a class="rvts66" href="EncryptedDiskWorkaround.html">for a list of the 32 languages. &nbsp;</a></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts27">Grub default timeout</span></p>
+<p class="rvps15"><span class="rvts6">Check this box to set the number of seconds the Grub menu waits before booting the default OS. </span></p>
+<p class="rvps15"><span class="rvts6">Unchecking this box will disable the Grub timeout.</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts27">Windows boot timeout seconds</span></p>
+<p class="rvps15"><span class="rvts6">Check this box to set the number of seconds Windows waits for a selection before it boots automatically.</span></p>
+<p class="rvps15"><span class="rvts6">Unchecking this box will disable the Windows boot timeout.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6">The default settings shown above should work fine, but you can change them if desired.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts55">It is important to click the </span><span class="rvts63">Manage Boot Menu</span><span class="rvts55">&nbsp;button below to add your OS selections!!</span></p>
+<p class="rvps4"><span class="rvts34"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts27">Manage Boot Menu</span></p>
+<p class="rvps15"><span class="rvts6">This takes you to the </span><a class="rvts64" href="Managingthebootmenu.html">Manage Boot Menu</a><span class="rvts6">&nbsp;screen where you will add your OS selections. </span></p>
+<p class="rvps15"><span class="rvts6">You </span><span class="rvts67">must add</span><span class="rvts6">&nbsp;your Linux systems or they will not appear at boot time.</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6">After you have added and customized your OS selections, Click the </span><a class="rvts62" href="TheMainConfigurationScreen.html">OK</a><span class="rvts6">&nbsp;button. </span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6">The update will now complete and the </span><a class="rvts64" href="TheMainConfigurationScreen.html#Grub2Win_Log">Grub2Win Log</a><span class="rvts6">&nbsp;screen will appear.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6">You can run the GUI as often as desired when you want to add systems or change boot options. Each time you run it, a new customized </span><span class="rvts28">grub.cfg</span><span class="rvts6">&nbsp;file will be created. Backup copies of the 5 most recent settings and update logs will be maintained in the </span><span class="rvts28">C:\grub2\windata\backup</span><span class="rvts6">&nbsp;directory. Backups of the Windows BCD will also be stored there.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Grub2Win_Log"></a><span class="rvts6"><br/></span></p>
+<p class="rvps4"><img alt="" style="padding : 1px;" src="lib/Main Log.jpg"></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps5" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Free HTML Help documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2010 - 2024  by Dave Pickens. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

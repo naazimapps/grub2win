@@ -1,0 +1,137 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Customizing GNU Grub boot modules</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 6.9.0.577">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Grub2Win User Manual.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("CustomizingGNUGrubbootmodules");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Customizing GNU Grub boot modules</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="AdvancedTopics.html">Advanced Topics</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps44"><span class="rvts8">Customization of the GNU Grub boot modules</span></p>
+<p class="rvps44"><span class="rvts8"><br/></span></p>
+<p class="rvps55"><span class="rvts15"><br/></span></p>
+<p class="rvps8"><span class="rvts9">The GNU Grub module loaded at boot time by your machine depends on the type of firmware your machine is running:</span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9">For machines with BIOS firmware, the boot module is loaded from the </span><span class="rvts13">C:\grub2\g2bootmgr</span><span class="rvts9">&nbsp;directory. The module name is </span><span class="rvts13">gnugrub.kernel.bios</span></p>
+<p class="rvps53"><span class="rvts13"><br/></span></p>
+<p class="rvps53"><span class="rvts9">For machines with 64 Bit EFI firmware, the boot module is loaded from the </span><span class="rvts13">\efi\grub2win</span><span class="rvts9">&nbsp;directory. The module name is </span><span class="rvts13">gnugrub.kernel64.efi</span></p>
+<p class="rvps53"><span class="rvts13"><br/></span></p>
+<p class="rvps53"><span class="rvts9">For machines with 32 Bit EFI firmware, the boot module is loaded from the </span><span class="rvts13">\efi\grub2win</span><span class="rvts9">&nbsp;directory. The module name is </span><span class="rvts13">gnugrub.kernel32.efi</span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><span class="rvts9">The</span><span class="rvts13">&nbsp;</span><span class="rvts9">GNU Grub modules supplied in </span><span class="rvts13">C:\grub2\g2bootmgr </span><span class="rvts9">should work in nearly every environment. However, if you wish to make custom changes to the &nbsp;modules, you can customize them. The customization procedure is run under Windows as a .bat script</span></p>
+<p class="rvps8"><span class="rvts13"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps19"><span class="rvts26">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts96">Warning!!</span></p>
+<p class="rvps19"><span class="rvts26"><br/></span></p>
+<p class="rvps24"><span class="rvts13">Customizing the boot modules should only be attempted if you have a specific need. </span></p>
+<p class="rvps24"><span class="rvts13"><br/></span></p>
+<p class="rvps24"><span class="rvts13">It is possible to render your system unbootable. Please be sure you have good backups.</span></p>
+<p class="rvps24"><span class="rvts13"><br/></span></p>
+<p class="rvps24"><span class="rvts13"><br/></span></p>
+<p class="rvps24"><span class="rvts9">The customization package can be obtained by unzipping C:\grub2\winsource\xxgnugen.zip</span></p>
+<p class="rvps24"><span class="rvts9"><br/></span></p>
+<p class="rvps24"><span class="rvts9">Then unzipped gnugen directory contains a ReadMe.txt file with full instructions.</span></p>
+<p class="rvps24"><span class="rvts13"><br/></span></p>
+<p class="rvps24"><span class="rvts13"><br/></span></p>
+<p class="rvps24"><span class="rvts13"><br/></span></p>
+<p class="rvps24"><span class="rvts13"><br/></span></p>
+<p class="rvps24"><span class="rvts13"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps44"><span class="rvts8"><br/></span></p>
+<p class="rvps44"><span class="rvts13"><br/></span></p>
+<p class="rvps24"><span class="rvts13"><br/></span></p>
+<p class="rvps24"><span class="rvts13"><br/></span></p>
+<p class="rvps24"><span class="rvts13"><br/></span></p>
+<p class="rvps24"><span class="rvts13"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p></p>
+<p class="rvps5" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/help-authoring-tool">Free help authoring environment</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2010 - 2024  by Dave Pickens. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

@@ -1,0 +1,177 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Setting your labels</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 6.9.0.577">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Grub2Win User Manual.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Settingyourlabels");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Setting your labels</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="UsingPartitionLabels.html">Using Partition Labels</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps21"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Setting Linux Partition Labels</span></p>
+<p class="rvps2"><span class="rvts9"><br/></span></p>
+<p class="rvps2"><span class="rvts9"><br/></span></p>
+<p class="rvps41"><span class="rvts79">When choosing labels, use meaningful names that are easy to remember. They are case sensitive and can be a maximum of 16 bytes in length. For grub2 search to work properly, labels must not contain embedded spaces.</span></p>
+<p class="rvps40"><span class="rvts9"><br/></span></p>
+<p class="rvps40"><span class="rvts9">&nbsp; </span></p>
+<p class="rvps4"><span class="rvts9">Most recent Linux distributions including Ubuntu, Suse and Fedora use the </span><span class="rvts13">btrfs</span><span class="rvts9">&nbsp;filesystem by default for their root partitions. You can set the label for the root partition using the </span><span class="rvts13">btrfs</span><span class="rvts9">&nbsp;command. &nbsp;</span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9">This must be done from within a Linux system. The </span><span class="rvts13">gparted</span><span class="rvts9">&nbsp;utility is available for all popular distributions and makes it easy to obtain information about your disks and partitions. You can also use </span><span class="rvts13">gparted</span><span class="rvts9">&nbsp;to set the label for your Linux swap partition.</span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts13">gpartd</span><span class="rvts9">&nbsp;can't set the label for the currently mounted Linux root partition, but it can be used to obtain the physical address needed below.</span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9">This example assumes the Linux root partition is on drive 0, partition 3.</span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9">Using </span><span class="rvts13">gpartd</span><span class="rvts9">&nbsp;we find that the physical address of the partition is /dev/sda3.</span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9">For btrfs filesystem, use the following commands to set the partition label.</span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps15"><span class="rvts9">From a Linux command line enter:</span></p>
+<p class="rvps15"><span class="rvts13"><br/></span></p>
+<p class="rvps9"><span class="rvts39">sudo &nbsp; &nbsp;btrfs &nbsp; &nbsp;filesystem &nbsp; &nbsp;label &nbsp; &nbsp;</span><span class="rvts13">/dev/sda3 &nbsp;</span></p>
+<p class="rvps15"><span class="rvts9"><br/></span></p>
+<p class="rvps9"><span class="rvts9">The current disk label, if any, for that partition will be displayed.</span></p>
+<p class="rvps9"><span class="rvts9"><br/></span></p>
+<p class="rvps9"><span class="rvts9"><br/></span></p>
+<p class="rvps15"><span class="rvts9">Entering:</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts39">sudo &nbsp; &nbsp;btrfs &nbsp; &nbsp;filesystem &nbsp; &nbsp;label &nbsp; &nbsp;</span><span class="rvts13">/dev/sda3 &nbsp; ubuntu-22.04</span></p>
+<p class="rvps2"><span class="rvts9"><br/></span></p>
+<p class="rvps9"><span class="rvts9">Will set the disk label to &nbsp;</span><span class="rvts13">ubuntu-22.04</span><span class="rvts9">&nbsp;</span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps42"><span class="rvts9">For older Linux </span><span class="rvts13">ext4</span><span class="rvts9">&nbsp;filesystems:</span></p>
+<p class="rvps17"><span class="rvts9"><br/></span></p>
+<p class="rvps15"><span class="rvts9">From a Linux command line enter:</span></p>
+<p class="rvps15"><span class="rvts13"><br/></span></p>
+<p class="rvps9"><span class="rvts13">sudo &nbsp; e2label &nbsp; &nbsp;/dev/sda3 &nbsp;</span></p>
+<p class="rvps15"><span class="rvts9"><br/></span></p>
+<p class="rvps9"><span class="rvts9">The current disk label, if any, for that partition will be displayed.</span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps2"><span class="rvts9"><br/></span></p>
+<p class="rvps15"><span class="rvts9">Entering:</span></p>
+<p class="rvps15"><span class="rvts9"><br/></span></p>
+<p class="rvps9"><span class="rvts13">sudo &nbsp; e2label &nbsp; &nbsp;/dev/sda3 &nbsp; &nbsp; ubuntu-22.04</span></p>
+<p class="rvps15"><span class="rvts9"><br/></span></p>
+<p class="rvps9"><span class="rvts9">Will set the disk label to &nbsp;</span><span class="rvts13">ubuntu-22.04</span><span class="rvts9">&nbsp;</span></p>
+<p class="rvps9"><span class="rvts9"><br/></span></p>
+<p class="rvps9"><span class="rvts9"><br/></span></p>
+<p class="rvps9"><span class="rvts9"><br/></span></p>
+<p class="rvps9"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9">To label your EFI partition, use the Linux </span><span class="rvts13">fatlabel</span><span class="rvts9">&nbsp;command.</span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps15"><span class="rvts9">Entering:</span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps9"><span class="rvts13">sudo &nbsp; fatlabel &nbsp; &nbsp;/dev/sda1 &nbsp; &nbsp; EFI-PART</span></p>
+<p class="rvps15"><span class="rvts9"><br/></span></p>
+<p class="rvps9"><span class="rvts9">Will set the EFI partition disk label to &nbsp;</span><span class="rvts13">EFI-PART</span><span class="rvts9">&nbsp;</span></p>
+<p class="rvps9"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps2"><span class="rvts9"><br/></span></p>
+<p class="rvps39"><span class="rvts8"><br/></span></p>
+<p class="rvps39"><span class="rvts8">Setting Labels For Other Operating Systems</span></p>
+<p class="rvps38"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9">To set a label on a fat or NTFS filesystem from within </span><span class="rvts13">Microsoft Windows</span><span class="rvts9">, go to </span><span class="rvts13">My Computer</span><span class="rvts9">, right-click on the drive and click </span><span class="rvts13">Properties</span><span class="rvts9">&nbsp;to label the partition.</span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9"><br/></span></p>
+<p class="rvps4"><span class="rvts9">From within Mac OS-X you can use </span><span class="rvts13">Finder</span><span class="rvts9">&nbsp;and right-click on the drive. Then click </span><span class="rvts13">Get Info</span><span class="rvts9">&nbsp;to set the label.</span></p>
+<p class="rvps2"><span class="rvts9"><br/></span></p>
+<p class="rvps2"><span class="rvts9"><br/></span></p>
+<p class="rvps2"><span class="rvts9"><br/></span></p>
+<p class="rvps2"><span class="rvts9"><br/></span></p>
+<p class="rvps2"><span class="rvts9"><br/></span></p>
+<p class="rvps2"><span class="rvts9"><br/></span></p>
+<p class="rvps2"><span class="rvts9"><br/></span></p>
+<p class="rvps2"><span class="rvts9"><br/></span></p>
+<p></p>
+<p class="rvps5" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Free Qt Help documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2010 - 2024  by Dave Pickens. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

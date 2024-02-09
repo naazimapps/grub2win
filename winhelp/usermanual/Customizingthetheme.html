@@ -1,0 +1,219 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Customizing the theme</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 6.9.0.577">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Grub2Win User Manual.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Customizingthetheme");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Customizing the theme</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="UsingtheGrubMenu.html">Using the Grub Menu</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps32"><span class="rvts53">Customize Theme</span></p>
+<p class="rvps3"><span class="rvts28"><br/></span></p>
+<p class="rvps31"><img width="545" height="422" alt="" style="padding : 1px;" src="lib/Customize Theme.jpg"></p>
+<p class="rvps18"><span class="rvts6">The background image shown here is from the &nbsp;"Beachsunset" theme.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6">This screen will appear when you click the Customize Theme button on the </span><a class="rvts64" href="TheMainConfigurationScreen.html">Main Configuration</a><span class="rvts6">&nbsp; screen.</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps19"><span class="rvts27">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="rvps15"><span class="rvts27">Click the image to select your background</span></p>
+<p class="rvps9"><span class="rvts6">Click the screenshot image to choose the background to be displayed at boot time.</span></p>
+<p class="rvps9"><span class="rvts6">The background selection screen will then appear.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps18"><span class="rvts6">If you want the Grub boot time console to use text mode instead of a graphics background, select</span></p>
+<p class="rvps18"><span class="rvts28">** No Theme - Text Only **</span></p>
+<p class="rvps18"><span class="rvts28"><br/></span></p>
+<p class="rvps18"><span class="rvts6">This dialog lets you add your own background image files. The files must be in JPG format. Max image file size is 4 MB.</span></p>
+<p class="rvps23"><span class="rvts6">See the &nbsp;</span><a class="rvts64" href="UserBackgroundsandImages.html">Other User Files</a><span class="rvts6">&nbsp; topic for details.</span></p>
+<p class="rvps21"><span class="rvts28"><br/></span></p>
+<p class="rvps18"><span class="rvts6">You can also select any user background files you want to remove.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts27">Center Menus</span></p>
+<p class="rvps9"><span class="rvts6">Check this to vertically center the menu entries on the boot screen.</span></p>
+<p class="rvps9"><span class="rvts6">You may need to adjust the </span><span class="rvts28">Grub Graphics Mode</span><span class="rvts6">&nbsp;on the </span><a class="rvts64" href="TheMainConfigurationScreen.html">Main Configuration Screen</a><span class="rvts6">&nbsp;for centering to work properly.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts27">Set Text Colors</span></p>
+<p class="rvps9"><span class="rvts6">By clicking these buttons, you can set the colors for the following items:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps33"><span class="rvts6">Titles &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- The color of the boot menu titles.</span></p>
+<p class="rvps33"><span class="rvts6"><br/></span></p>
+<p class="rvps33"><span class="rvts6">Selected Item &nbsp; &nbsp; &nbsp; - The color of the boot menu item currently selected.</span></p>
+<p class="rvps33"><span class="rvts6"><br/></span></p>
+<p class="rvps33"><span class="rvts6">Text &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - The color of the command prompt, version and boot mode text.</span></p>
+<p class="rvps33"><span class="rvts6"><br/></span></p>
+<p class="rvps33"><span class="rvts6">Clock &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - The color of the circular clock ticks and countdown seconds digits.</span></p>
+<p class="rvps18"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts27">Enable Grub Timeout</span></p>
+<p class="rvps9"><span class="rvts6">Check this to enable the Grub countdown clock. You can then set the number of seconds for the Grub default timeout.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts27">Style</span></p>
+<p class="rvps9"><span class="rvts6">Select whether you would like a </span><span class="rvts28">Clock</span><span class="rvts6">&nbsp;or a </span><span class="rvts28">Progress Bar</span><span class="rvts6">&nbsp;to show the time remaining before boot.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts27"><br/></span></p>
+<p class="rvps15"><span class="rvts27">Face</span></p>
+<p class="rvps9"><span class="rvts6">Select clock face image to show within the circular timeout clock ticks. This option is only available when you select the </span><span class="rvts28">clock</span><span class="rvts6">&nbsp;timeout style above.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps34"><span class="rvts28">Note:</span><span class="rvts6">&nbsp;You can add our own clock face images. See the &nbsp;</span><a class="rvts64" href="UserBackgroundsandImages.html">Other User Files</a><span class="rvts6">&nbsp; topic for details.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts27">Dark Background</span></p>
+<p class="rvps9"><span class="rvts6">Check this to include a dark background. This will improve the contrast with lighter theme images.</span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts27">Highlight Selected Item</span></p>
+<p class="rvps9"><span class="rvts6">Check this to highlight the selected menu item for better visibility.</span></p>
+<p class="rvps9"><span class="rvts27"><br/></span></p>
+<p class="rvps9"><span class="rvts27"><br/></span></p>
+<p class="rvps15"><span class="rvts27">Show Scroll Bar</span></p>
+<p class="rvps9"><span class="rvts6">A scroll bar will appear at boot time if there are enough items to overflow the page. </span></p>
+<p class="rvps9"><span class="rvts6">This can be useful when you have many boot menu items.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts27">Show Grub2Win Version</span></p>
+<p class="rvps9"><span class="rvts6">Check this if you wish the version to appear at boot time.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts27">Show Prompt Lines</span></p>
+<p class="rvps9"><span class="rvts6">Check this if you wish the command prompt help text to appear at boot time.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts27">Show Boot Mode</span></p>
+<p class="rvps9"><span class="rvts6">Check this to show the current boot mode of the machine, either </span><span class="rvts28">EFI</span><span class="rvts6">&nbsp;or </span><span class="rvts28">BIOS</span><span class="rvts6">. Also shows the architecture of the machine's firmware, either </span><span class="rvts28">64 Bit</span><span class="rvts6">&nbsp;or </span><span class="rvts28">32 Bit</span><span class="rvts6">.</span></p>
+<p class="rvps15"><span class="rvts74"><br/></span></p>
+<p class="rvps15"><span class="rvts74"><br/></span></p>
+<p class="rvps15"><span class="rvts27">Set Standard View</span></p>
+<p class="rvps9"><span class="rvts6">Resets the theme image options to factory settings. </span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6">When you are satisfied with your choices. Click the </span><span class="rvts28">OK</span><span class="rvts6">&nbsp;button.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps15"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps5" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Produce Kindle eBooks easily</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2010 - 2024  by Dave Pickens. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

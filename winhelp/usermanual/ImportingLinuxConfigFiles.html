@@ -1,0 +1,210 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Importing Linux Config Files</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 6.9.0.577">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Grub2Win User Manual.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("ImportingLinuxConfigFiles");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Importing Linux Config Files</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="AdvancedTopics.html">Advanced Topics</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts8">Importing Linux Config Files</span></p>
+<p class="rvps54"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts9"><br/></span></p>
+<p class="rvps55"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><span class="rvts9">This facility lets you import GNU Grub version 2 menu entries from a file generated on your Linux system.</span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><span class="rvts9">Import is useful when Grub2Win does not support your particular Linux distribution for automatic code generation.</span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><a class="rvts99" href="Enteringcustomcode.html">There are literally thousands of Linux distributions available. </a></p>
+<p class="rvps8"><a class="rvts99" href="Enteringcustomcode.html">It is simply not possible for Grub2Win to automatically generate boot menus for all of them.</a></p>
+<p class="rvps8"><span class="rvts100">The most popular distributions such as Ubuntu, Fedora and Suse are supported.</span></p>
+<p class="rvps8"><span class="rvts100"><br/></span></p>
+<p class="rvps8"><span class="rvts100"><br/></span></p>
+<p class="rvps8"><span class="rvts100">Here are the steps to import Linux menu entries:</span></p>
+<p class="rvps8"><span class="rvts100"><br/></span></p>
+<p class="rvps54"><span class="rvts100"><br/></span></p>
+<p class="rvps53"><span class="rvts100">1.</span><span class="rvts100"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts100">Within Linux, copy the /boot/grub/grub.cfg file to a fat32 flash drive or to a Windows NTFS partition.</span></p>
+<p class="rvps60"><span class="rvts100">&nbsp; &nbsp;Name the file "linux.grub.cfg".</span></p>
+<p class="rvps58"><span class="rvts100"><br/></span></p>
+<p class="rvps60"><span class="rvts100">&nbsp; &nbsp;For Fedora systems you can also import the .conf files stored in Fedora's /boot/loader/entries directory.</span></p>
+<p class="rvps60"><span class="rvts100">&nbsp; &nbsp;These files change every time the Fedora kernel is updated and must be imported into Grub2Win again.</span></p>
+<p class="rvps60"><span class="rvts100">&nbsp; &nbsp;You can avoid this by maintaining a stable kernel name using the xxkernlink.sh script. </span></p>
+<p class="rvps60"><span class="rvts100">&nbsp; &nbsp;See</span><span class="rvts104">&nbsp;</span><a class="rvts103" href="FedoraandManjaro.html">Fedora and Manjaro</a><span class="rvts100">.</span></p>
+<p class="rvps60"><span class="rvts100"><br/></span></p>
+<p class="rvps54"><span class="rvts100"><br/></span></p>
+<p class="rvps53"><span class="rvts100">2.</span><span class="rvts100"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts100">Examine your linux.grub.cfg file and ensure that it contains the menuentry sections for your Linux machines.</span></p>
+<p class="rvps53"><span class="rvts100">&nbsp; &nbsp;</span><span class="rvts100"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts100">See the menuentry example in </span><span class="rvts101">Note 1 </span><span class="rvts100">below. Linux menuentries </span><span class="rvts101">must</span><span class="rvts100">&nbsp;be present in your linux.grub.cfg file.</span></p>
+<p class="rvps54"><span class="rvts100"><br/></span></p>
+<p class="rvps54"><span class="rvts100"><br/></span></p>
+<p class="rvps53"><span class="rvts100">3.</span><span class="rvts100"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts100">Boot into Windows and run Grub2Win. Click on the yellow "Manage Boot Menu" button.</span></p>
+<p class="rvps54"><span class="rvts100"><br/></span></p>
+<p class="rvps54"><span class="rvts100"><br/></span></p>
+<p class="rvps53"><span class="rvts100">4.</span><span class="rvts100"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts100">Once the Menu Configuration screen comes up click the blue "Linux" button at the top of the screen.</span></p>
+<p class="rvps53"><span class="rvts100"><br/></span></p>
+<p class="rvps53"><span class="rvts100"><br/></span></p>
+<p class="rvps53"><span class="rvts100">5.</span><span class="rvts100"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts100">When the file dialog appears select the linux.grub.cfg file from step 1 above.</span></p>
+<p class="rvps53"><span class="rvts100"><br/></span></p>
+<p class="rvps53"><span class="rvts100"><br/></span></p>
+<p class="rvps53"><span class="rvts100">6.</span><span class="rvts100"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts100">You will then see a selection screen containing the Linux menu items available for import.</span></p>
+<p class="rvps8"><span class="rvts100"><br/></span></p>
+<p class="rvps8"><span class="rvts100"><br/></span></p>
+<p class="rvps8"><span class="rvts100"><br/></span></p>
+<p class="rvps8"><img alt="" style="padding : 1px;" src="lib/ImportLinux.jpg"></p>
+<p class="rvps8"><span class="rvts100"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9">Click the checkbox for the menu items you want to import and click "Import Selected Items.</span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9">The menu items you imported will now appear at the bottom of the Grub2Win menus as custom code.</span></p>
+<p class="rvps53"><span class="rvts9">You can now click the imported items to edit the code or move them up or down in the boot menu.</span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts21">Note 1.</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">Menuentry Example </span></p>
+<p class="rvps53"><span class="rvts21"><br/></span></p>
+<p class="rvps6"><span class="rvts9">Each Linux menuentry in your grub.linux.cfg file should look similar to this sample:</span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps2"><span class="rvts6">menuentry 'Debian GNU/Linux' --class debian --class gnu-linux --class gnu --class os </span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">load_video</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">insmod gzio</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">if [ x$grub_platform = xxen ]; then insmod xzio; insmod lzopio; fi</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">insmod part_msdos</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">insmod ext2</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">set root='hd0,msdos1'</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">if [ x$feature_platform_search_hint = xy ]; then</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">&nbsp; &nbsp; &nbsp;search --no-floppy --fs-uuid --set=root &nbsp;3cd4a219-0100-4392-a84a-5befc113dd0a</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">else</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">&nbsp; &nbsp; &nbsp;search --no-floppy --fs-uuid --set=root &nbsp;3cd4a219-0100-4392-a84a-5befc113dd0a</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">fi</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">echo</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">'Loading Linux 5.10.0-22-amd64 ...'</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">linux</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">/boot/vmlinuz-5.10.0-22-amd64 root=UUID=3cd4a219-0100-4392-a84a-5befc113dd0a ro &nbsp;quiet splash</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">echo</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">'Loading initial ramdisk ...'</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">initrd</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">/boot/initrd.img-5.10.0-22-amd64</span></p>
+<p class="rvps2"><span class="rvts6">}</span></p>
+<p class="rvps53"><span class="rvts102"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts21">Note 2.</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">Required items</span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts38">&nbsp;</span><span class="rvts9">These three items </span><span class="rvts13">must all</span><span class="rvts9">&nbsp;appear in your grub.linux.cfg file.</span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps54"><span class="rvts9">1. &nbsp;A </span><span class="rvts13">search</span><span class="rvts9">&nbsp;command so that grub can locate the Linux root partition.</span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps54"><span class="rvts9">2. &nbsp;A </span><span class="rvts13">linux</span><span class="rvts9">&nbsp;command directing grub to load the Linux kernel.</span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps54"><span class="rvts9">3. &nbsp;An </span><span class="rvts13">initrd</span><span class="rvts9">&nbsp;command directing grub to set up the Linux ramdisk</span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts21">Note 3.</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">Special characters</span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts38">&nbsp;The following special characters are not allowed in menu titles</span><span class="rvts6">&nbsp; &nbsp; &nbsp;</span><span class="rvts39">&nbsp;</span><span class="rvts43">\ &nbsp; / &nbsp; : &nbsp; * &nbsp; ? &nbsp; $ &nbsp; &amp; &nbsp; " &nbsp; &gt; &nbsp; &lt; &nbsp; | &nbsp;' &nbsp; } &nbsp; { &nbsp;</span></p>
+<p class="rvps53"><span class="rvts9">&nbsp;The import function will remove any invalid characters.</span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps53"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps57"><span class="rvts9"><br/></span></p>
+<p class="rvps57"><span class="rvts9"><br/></span></p>
+<p class="rvps57"><span class="rvts9"><br/></span></p>
+<p class="rvps57"><span class="rvts9"><br/></span></p>
+<p></p>
+<p class="rvps5" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Free PDF documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2010 - 2024  by Dave Pickens. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

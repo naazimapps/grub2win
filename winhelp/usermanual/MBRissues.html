@@ -1,0 +1,132 @@
+﻿
+
+<html>
+	
+<head>
+	<title>MBR issues </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 6.9.0.577">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Grub2Win User Manual.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("MBRissues");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">MBR issues </h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="AdvancedTopics.html">Advanced Topics</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts41">MBR Issues</span></p>
+<p class="rvps3"><span class="rvts43">(BIOS Machines Only)</span></p>
+<p class="rvps3"><span class="rvts42"><br/></span></p>
+<p class="rvps2"><span class="rvts42"><br/></span></p>
+<p class="rvps4"><span class="rvts38">The</span><span class="rvts39">&nbsp;Master Boot Record</span><span class="rvts38">&nbsp;or </span><span class="rvts39">MBR</span><span class="rvts38">&nbsp;is a small block of machine code that controls the boot of your PC. It is the first thing to run once the BIOS process completes at boot time. This code is not run when you boot in EFI mode.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">On Windows systems, the MBR is created when Windows is first installed. This is the </span><span class="rvts39">Windows Native MBR</span><span class="rvts38">.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">In many cases, Linux destroys the Windows MBR and replaces it with code that varies depending on the particular Linux distribution.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">Grub2Win in BIOS mode requires that you boot the </span><span class="rvts39">Windows Native MBR</span><span class="rvts38">. If it has been overwritten by Linux, Grub2Win will not work properly.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38">You can restore the Windows Native MBR in a couple of ways:</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps3"><span class="rvts39">** &nbsp;Caution: These instructions are for BIOS machines only. &nbsp;**</span></p>
+<p class="rvps3"><span class="rvts39">** &nbsp;Do not attempt to restore the MBR to an EFI machine. &nbsp; &nbsp; **</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps9"><span class="rvts38">The simplest way is to download and install </span><span class="rvts39">EasyBCD</span><span class="rvts38">&nbsp;to your Windows system.</span></p>
+<p class="rvps9"><span class="rvts38"><br/></span></p>
+<p class="rvps21"><span class="rvts38">This is a terrific product that is free for non-commercial use. It allows easy manipulation of the Windows BCD and MBR. EasyBCD is available </span><a class="rvts109" href="http://neosmart.net/EasyBCD/" target="_blank">here</a><span class="rvts38">.</span></p>
+<p class="rvps21"><span class="rvts38"><br/></span></p>
+<p class="rvps21"><span class="rvts38">Once EasyBCD is started, select the </span><span class="rvts39">BCD Deployment</span><span class="rvts38">&nbsp;button. Select the MBR configuration option for your version of Windows, either </span><span class="rvts39">Windows Vista +</span><span class="rvts38">&nbsp;or </span><span class="rvts39">XP</span><span class="rvts38">. Then click the </span><span class="rvts39">Write MBR</span><span class="rvts38">&nbsp;button to restore the Windows Native MBR.</span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p class="rvps9"><span class="rvts38">The other option is to boot your Microsoft </span><span class="rvts39">Windows Install DVD</span><span class="rvts38">.</span></p>
+<p class="rvps9"><span class="rvts38"><br/></span></p>
+<p class="rvps21"><span class="rvts38">You can then use the </span><span class="rvts39">Repair Your Computer</span><span class="rvts38">&nbsp;dialog to run </span><span class="rvts39">Startup Repair</span><span class="rvts38">. This will restore the Windows Native MBR.</span></p>
+<p class="rvps21"><span class="rvts38"><br/></span></p>
+<p class="rvps21"><span class="rvts38"><br/></span></p>
+<p class="rvps21"><span class="rvts38"><br/></span></p>
+<p class="rvps21"><span class="rvts38"><br/></span></p>
+<p class="rvps21"><span class="rvts38"><br/></span></p>
+<p class="rvps21"><span class="rvts38"><br/></span></p>
+<p class="rvps21"><span class="rvts38"><br/></span></p>
+<p class="rvps4"><span class="rvts38"><br/></span></p>
+<p></p>
+<p class="rvps5" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Free iPhone documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2010 - 2024  by Dave Pickens. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

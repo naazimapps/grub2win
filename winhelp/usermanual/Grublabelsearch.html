@@ -1,0 +1,123 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Grub label search</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 6.9.0.577">
+	<meta name="description" content="" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Grub2Win User Manual.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Grublabelsearch");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Grub label search</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="UsingPartitionLabels.html">Using Partition Labels</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts15">Configuring Grub2 For Partition Label Search</span></p>
+<p class="rvps2"><span class="rvts9"><br/></span></p>
+<p class="rvps2"><span class="rvts9"><br/></span></p>
+<p class="rvps15"><span class="rvts9">&nbsp; &nbsp; &nbsp;You can use Grub2Win to search for a partition by its label at boot time. </span></p>
+<p class="rvps15"><span class="rvts9"><br/></span></p>
+<p class="rvps9"><span class="rvts9">First, set the partition label using these instructions:</span><span class="rvts13">&nbsp;</span><a class="rvts17" href="Settingyourlabels.html">Setting Your Labels</a><span class="rvts9">.</span></p>
+<p class="rvps15"><span class="rvts9"><br/></span></p>
+<p class="rvps9"><span class="rvts9">Now that the label is set, simply run Grub2Win and edit the OS details for the menu entry. </span></p>
+<p class="rvps9"><span class="rvts9">Choose</span><span class="rvts13">&nbsp;Load The Kernel By &nbsp; Partition Label</span><span class="rvts9">&nbsp; &nbsp;as shown below.</span></p>
+<p class="rvps9"><span class="rvts9">Now select the partition you want to load at boot time.</span></p>
+<p class="rvps9"><span class="rvts9"><br/></span></p>
+<p class="rvps9"><span class="rvts9">In this example, we are searching for a Ubuntu Linux partition with a label of </span><span class="rvts13">ubuntu-22.04</span></p>
+<p class="rvps9"><span class="rvts9">Grub2Win will generate a grub2.cfg file entry with the proper code to locate the partition at boot time.</span></p>
+<p class="rvps15"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps3"><img width="635" height="377" alt="" style="padding : 1px;" src="lib/Edit OS Details.jpg"></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p class="rvps8"><span class="rvts9"><br/></span></p>
+<p></p>
+<p class="rvps5" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Full-featured Kindle eBooks generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2010 - 2024  by Dave Pickens. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+
