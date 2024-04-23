@@ -1,4 +1,4 @@
-# Grub2Win 2.3.8.4
+# Grub2Win 2.4.0.5
 Now includes the latest GNU Grub 2.12 rc1 kernel
 
 Grub2Win is completely free and open source. All modules are digitally signed for your security.
